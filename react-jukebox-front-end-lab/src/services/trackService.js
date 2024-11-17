@@ -15,6 +15,7 @@ const index = async () => {
 const create = async (formData) => {
   try {
     const res = await axios.post(BASE_URL, formData);
+    console.log(res);
     return res.data;
   } catch (error) {
     console.log(error);

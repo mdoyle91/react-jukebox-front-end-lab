@@ -11,7 +11,7 @@ const TrackForm = (props) => {
   );
 
   const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.title]: event.target.value });
+    setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
   const handleSubmitForm = (event) => {

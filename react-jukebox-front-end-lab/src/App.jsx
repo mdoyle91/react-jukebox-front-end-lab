@@ -38,7 +38,7 @@ const App = () => {
   const handleAddTrack = async (formData) => {
     try {
       const newTrack = await trackService.create(formData);
-
+      console.log(newTrack);
       if (newTrack.error) {
         throw new Error(newTrack.error);
       }
@@ -74,7 +74,7 @@ const App = () => {
     <>
       <TrackList
         trackList={trackList}
-        updatedSelected={updateSelected}
+        updateSelected={updateSelected}
         handleFormView={handleFormView}
         isFormOpen={isFormOpen}
       />
